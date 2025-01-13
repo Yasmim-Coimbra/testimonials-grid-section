@@ -11,9 +11,10 @@ main {
 
 main .container {
     display: grid;
-    grid-template-areas: 
-    "daniel daniel jonathan kira"
-    "jeanette patrick patrick kira";
+    position: relative;
+    grid-template-areas:
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
     grid-gap: 30px;
     width: 82%;
 }
@@ -63,6 +64,7 @@ main .container .card .profile-info {
 main .container .card.daniel {
     grid-area: daniel;
     background: url(../images/bg-pattern-quotation.svg) 80% 0 no-repeat var(--primary-violet);
+
     img {
         box-sizing: content-box;
         border: 2px solid #A775F1;
@@ -72,11 +74,12 @@ main .container .card.daniel {
 main .container .card.jonathan {
     grid-area: jonathan;
     background-color: var(--primary-dark-grayish-blue);
+    margin-left: 28%;
 }
 
 main .container .card.kira {
     grid-area: kira;
-    background-color: var(--white);
+    margin-left: 15%;
 }
 
 main .container .card.jeanette {
@@ -86,11 +89,25 @@ main .container .card.jeanette {
 
 main .container .card.patrick {
     grid-area: patrick;
+    position: absolute;
+    left: -7%;
     background-color: var(--primary-dark-blackish-blue);
+
     img {
         box-sizing: content-box;
         border: 2px solid var(--primary-violet);
     }
+}
+
+main .container .card.daniel,
+main .container .card.patrick {
+    width: 115%;
+}
+
+main .container .card.jonathan,
+main .container .card.jeanette,
+main .container .card.kira {
+    width: 85%;
 }
 
 main .container .card.daniel .profile-info h2,
@@ -98,17 +115,20 @@ main .container .card.jonathan .profile-info h2,
 main .container .card.patrick .profile-info h2 {
     color: var(--neutral-light-gray);
 }
+
 main .container .card.daniel .profile-info h3,
 main .container .card.jonathan .profile-info h3,
 main .container .card.patrick .profile-info h3 {
     color: var(--neutral-light-gray-50);
 }
+
 main .container .card.daniel .testimonial p:first-child,
 main .container .card.jonathan .testimonial p:first-child,
 main .container .card.patrick .testimonial p:first-child {
     color: var(--neutral-light-grayish-blue);
     margin-bottom: 15px;
 }
+
 main .container .card.daniel .testimonial p:nth-child(2),
 main .container .card.jonathan .testimonial p:nth-child(2),
 main .container .card.patrick .testimonial p:nth-child(2) {
@@ -119,15 +139,18 @@ main .container .card.jeanette .profile-info h2,
 main .container .card.kira .profile-info h2 {
     color: var(--primary-dark-grayish-blue);
 }
+
 main .container .card.jeanette .profile-info h3,
 main .container .card.kira .profile-info h3 {
     color: var(--primary-dark-grayish-blue-50);
 }
+
 main .container .card.jeanette .testimonial p:first-child,
 main .container .card.kira .testimonial p:first-child {
     color: var(--primary-dark-blackish-blue);
     margin-bottom: 15px;
 }
+
 main .container .card.jeanette .testimonial p:nth-child(2),
 main .container .card.kira .testimonial p:nth-child(2) {
     color: var(--primary-dark-grayish-blue-70);
