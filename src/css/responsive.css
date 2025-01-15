@@ -1,20 +1,10 @@
 @media (min-width: 1485px), (max-width: 1336px) {
     body {
-        main .container .card.daniel,
-        main .container .card.patrick {
+        main .container .card {
             width: 100%;
         }
 
         main .container .card.jonathan,
-        main .container .card.jeanette,
-        main .container .card.kira {
-            width: 100%;
-        }
-
-        main .container .card.jonathan {
-            margin-left: 0;
-        }
-
         main .container .card.kira {
             margin-left: 0;
         }
