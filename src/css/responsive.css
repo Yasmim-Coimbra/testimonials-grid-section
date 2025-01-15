@@ -1,0 +1,49 @@
+@media (min-width: 1485px), (max-width: 1336px) {
+    body {
+        main .container .card.daniel,
+        main .container .card.patrick {
+            width: 100%;
+        }
+
+        main .container .card.jonathan,
+        main .container .card.jeanette,
+        main .container .card.kira {
+            width: 100%;
+        }
+
+        main .container .card.jonathan {
+            margin-left: 0;
+        }
+
+        main .container .card.kira {
+            margin-left: 0;
+        }
+
+        main .container .card.patrick {
+            position: static;
+        }
+    }
+}
+
+@media (max-width: 1173px) {
+    body {
+        main {
+            padding-block: 3%;
+        }
+
+        main .container {
+        grid-template-areas:
+        "daniel" "jonathan" "jeanette" "patrick" "kira";
+        width: 70%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    main .container {
+        width: 100%;
+    }
+    main .container .card {
+        max-height: 800px;
+    }
+}
