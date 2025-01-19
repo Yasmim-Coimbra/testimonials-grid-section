@@ -1,17 +1,20 @@
-@media (min-width: 1485px), (max-width: 1336px) {
-    body {
-        main .container .card {
-            width: 100%;
-        }
+@media (max-width: 1336px), (min-width: 1485px) {
 
-        main .container .card.jonathan,
-        main .container .card.kira {
-            margin-left: 0;
-        }
+    main .container .card.kira,
+    main .container .card.daniel,
+    main .container .card.patrick,
+    main .container .card.jeanette,
+    main .container .card.jonathan {
+        width: 100%;
+    }
 
-        main .container .card.patrick {
-            position: static;
-        }
+    main .container .card.jonathan,
+    main .container .card.kira {
+        margin-left: 0;
+    }
+
+    main .container .card.patrick {
+        position: static;
     }
 }
 
@@ -22,18 +25,39 @@
         }
 
         main .container {
-        grid-template-areas:
-        "daniel" "jonathan" "jeanette" "patrick" "kira";
-        width: 70%;
+            grid-template-areas:
+                "daniel" "jonathan" "jeanette" "patrick" "kira";
+            width: 70%;
+            justify-content: center;
+        }
+
+        main .container .card.jonathan,
+        main .container .card.kira {
+            margin-left: 0;
+        }
+
+        main .container .card.patrick {
+            position: static;
+        }
+
+        main .container .card.kira,
+        main .container .card.daniel,
+        main .container .card.patrick,
+        main .container .card.jeanette,
+        main .container .card.jonathan {
+            width: 510.5px;
+            margin: 0 auto;
         }
     }
 }
 
-@media (max-width: 500px) {
-    main .container {
-        width: 100%;
-    }
-    main .container .card {
-        max-height: 800px;
+@media (max-width: 540px) {
+
+    main .container .card.kira,
+    main .container .card.daniel,
+    main .container .card.patrick,
+    main .container .card.jeanette,
+    main .container .card.jonathan {
+        max-width: 320px;
     }
 }
