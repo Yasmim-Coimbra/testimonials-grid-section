@@ -10,20 +10,19 @@ main {
 }
 
 main .container {
+    width: 85%;
     display: grid;
-    position: relative;
     grid-template-areas:
         "daniel daniel jonathan kira"
         "jeanette patrick patrick kira";
     grid-gap: 30px;
-    width: 82%;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 main .container .card {
     padding: 35px 30px;
     border-radius: 10px;
-    box-shadow: 10px 12px 15px -10px var(--primary-dark-grayish-blue-50);
-    box-shadow: 10px 12px 15px -10px black;
+    box-shadow: 30px 30px 80px -30px rgba(0, 0, 0, 0.6);
 }
 
 main .container .card h2,
@@ -34,6 +33,7 @@ main .container .card p:nth-child(2) {
 
 main .container .card p:nth-child(2) {
     font-size: 15px;
+    line-height: 135%;
 }
 
 main .container .card p:first-child {
@@ -74,12 +74,10 @@ main .container .card.daniel {
 main .container .card.jonathan {
     grid-area: jonathan;
     background-color: var(--primary-dark-grayish-blue);
-    margin-left: 28%;
 }
 
 main .container .card.kira {
     grid-area: kira;
-    margin-left: 15%;
 }
 
 main .container .card.jeanette {
@@ -89,8 +87,6 @@ main .container .card.jeanette {
 
 main .container .card.patrick {
     grid-area: patrick;
-    position: absolute;
-    left: -7%;
     background-color: var(--primary-dark-blackish-blue);
 
     img {
@@ -99,16 +95,6 @@ main .container .card.patrick {
     }
 }
 
-main .container .card.daniel,
-main .container .card.patrick {
-    width: 115%;
-}
-
-main .container .card.jonathan,
-main .container .card.jeanette,
-main .container .card.kira {
-    width: 85%;
-}
 
 main .container .card.daniel .profile-info h2,
 main .container .card.jonathan .profile-info h2,
@@ -116,10 +102,20 @@ main .container .card.patrick .profile-info h2 {
     color: var(--neutral-light-gray);
 }
 
+main .container .card.jeanette .profile-info h2,
+main .container .card.kira .profile-info h2 {
+    color: var(--primary-dark-grayish-blue);
+}
+
 main .container .card.daniel .profile-info h3,
 main .container .card.jonathan .profile-info h3,
 main .container .card.patrick .profile-info h3 {
     color: var(--neutral-light-gray-50);
+}
+
+main .container .card.jeanette .profile-info h3,
+main .container .card.kira .profile-info h3 {
+    color: var(--primary-dark-grayish-blue-50);
 }
 
 main .container .card.daniel .testimonial p:first-child,
@@ -129,26 +125,16 @@ main .container .card.patrick .testimonial p:first-child {
     margin-bottom: 15px;
 }
 
-main .container .card.daniel .testimonial p:nth-child(2),
-main .container .card.jonathan .testimonial p:nth-child(2),
-main .container .card.patrick .testimonial p:nth-child(2) {
-    color: var(--neutral-light-gray-70);
-}
-
-main .container .card.jeanette .profile-info h2,
-main .container .card.kira .profile-info h2 {
-    color: var(--primary-dark-grayish-blue);
-}
-
-main .container .card.jeanette .profile-info h3,
-main .container .card.kira .profile-info h3 {
-    color: var(--primary-dark-grayish-blue-50);
-}
-
 main .container .card.jeanette .testimonial p:first-child,
 main .container .card.kira .testimonial p:first-child {
     color: var(--primary-dark-blackish-blue);
     margin-bottom: 15px;
+}
+
+main .container .card.daniel .testimonial p:nth-child(2),
+main .container .card.jonathan .testimonial p:nth-child(2),
+main .container .card.patrick .testimonial p:nth-child(2) {
+    color: var(--neutral-light-gray-70);
 }
 
 main .container .card.jeanette .testimonial p:nth-child(2),
